@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%= if (employees && employees.length > 0) { %>
+        <%= for (let i=0; i<employees.length; i++) { %>
+            <p>Employee ID: <%= employees[i].e_id %></p>
+            <p>Email: <%= employees[i].e_email %></p>
+            <p>password: <%= employees[i].e_password %></p>
+            <p>First Name: <%= employees[i].e_fname %></p>
+            <p>Last Name: <%= employees[i].e_lname %></p>
+            <p>This Years Sales: <%= employees[i].e_yearsales %></p>
+            <p>Years With The Company: <%= employees[i].e_years %></p>
+            <p>Total Lifetime Sales: <%= employees[i].e_totalsales %></p>
+
+            <form action="/delete/<%=employees[i].e_id%>" method="post">
+                <button type="submit">Delete Employee</button>
+            </form>
+
+            <a href="/edit/<%=employees[i].e_id%>">Edit Employee Record</a>
+        <%= } %>
+    <%= } else { %>
+        <p>No Employees To Display.</p>
+    <%= } %>
+</body>
+</html>
