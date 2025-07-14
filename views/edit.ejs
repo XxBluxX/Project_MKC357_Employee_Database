@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <form action="/edit/<%=employee.e_id%>" method="post">
+        <label>Employee Id: </label>
+        <h3><%=employee.e_id%></h3>
+        <label>Email: </label>
+        <input type="text" name="email" value="<%=employee.e_email%>" required>
+        <label>Password: </label>
+        <input type="text" name="password" value="<%=employee.e_password%>" required>
+        <label>First Name: </label>
+        <input type="text" name="fname" value="<%=employee.e_fname%>">
+        <label>Last Name: </label>
+        <input type="text" name="lname" value="<%=employee.e_lname%>">
+        <label>This Years Sales: </label>
+        <input type="text" name="yearsales" value="<%=employee.e_yearsales%>">
+        <label>Years With The Company: </label>
+        <input type="text" name="years" value="<%=employee.e_years%>">
+        <label>Total Lifetime Sales: </label>
+        <input type="text" name="totalsales" value="<%=employee.e_totalsales%>">
+    </form>
+</body>
+</html>
