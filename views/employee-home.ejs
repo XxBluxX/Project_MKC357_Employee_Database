@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Employee ID: <%=employee.e_id%></h1>
+    <h3>Welcome <%=employee.e_fname%></h3>
+    <h3><%=employee.e_lname%></h3>
+    <h3>This Years Sales: <%=employee.e_yearsales%></h3>
+    <h3>Years With The Company: <%=employee.e_years%></h3>
+    <h3>Total Lifetime Sales: <%=employee.e_totalsales%></h3>
+
+    <a href="/edit/<%=employee.e_id%>">Edit Record</a>
+</body>
+</html>
