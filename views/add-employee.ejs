@@ -7,21 +7,33 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <form action="/add-employee" method="post">
-        <label>Email: </label>
-        <input type="text" name="email" required>
-        <label>Password: </label>
-        <input type="password" name="password" required>
-        <label>First Name: </label>
-        <input type="text" name="fname">
-        <label>Last Name: </label>
-        <input type="text" name="lname">
-        <label>Sales This Year: </label>
-        <input type="text" name="yearsales">
-        <label>Years With Company: </label>
-        <input type="text" name="years">
-        <label>Total Sales: </label>
-        <input type="text" name="totalsales">
-    </form>
+    <div class="addDiv">
+        <form action="/add-employee" method="post">
+            <label>Admin: </label>
+            <input type="checkbox" name="admin" value="true">
+            <br>
+            <label>Email: </label>
+            <input type="text" name="email" required>
+            <label>Password: </label>
+            <input type="password" name="password" required>
+            <br>
+            <label>First Name: </label>
+            <input type="text" name="fname">
+            <label>Last Name: </label>
+            <input type="text" name="lname">
+            <br>
+            <label>Sales This Year: </label>
+            <input type="number" name="yearsales">
+            <br>
+            <label>Years With Company: </label>
+            <input type="number" name="years">
+            <br>
+            <label>Total Sales: </label>
+            <input type="number" name="totalsales">
+            <br>
+            <button type="submit">Add Employee</button>
+        </form>
+        <a href="/admin-home">Cancel</a>
+    </div>
 </body>
 </html>
