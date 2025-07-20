@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Employee ID: <%=employee.e_id%></h1>
-    <h3>Welcome <%=employee.e_fname%></h3>
-    <h3><%=employee.e_lname%></h3>
-    <h3>This Years Sales: <%=employee.e_yearsales%></h3>
-    <h3>Years With The Company: <%=employee.e_years%></h3>
-    <h3>Total Lifetime Sales: <%=employee.e_totalsales%></h3>
+    <div class="buttonBox">
+        <form action="/admin-home" method="get">
+            <button type="submit" class="adminButton">Admin View</button>
+        </form>
 
-    <a href="/edit/<%=employee.e_id%>">Edit Record</a>
+        <a href="/logout" class="logButton">Logout</a>
+    </div>
+
+    <div class="employee">
+        <h1>Employee ID: <%=employee.e_id%></h1>
+        <h3>Welcome <%=employee.e_fname%> <%=employee.e_lname%></h3>
+        <h3>This Years Sales: <%=employee.e_yearsales%></h3>
+        <h3>Years With The Company: <%=employee.e_years%></h3>
+        <h3>Total Lifetime Sales: <%=employee.e_totalsales%></h3>
+    </div>
+
+    <a href="/edit/<%=employee.e_id%>" class="empButton">Edit Record</a>
+
 </body>
 </html>
