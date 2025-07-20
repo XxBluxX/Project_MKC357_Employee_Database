@@ -7,25 +7,40 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <%= if (employees && employees.length > 0) { %>
-        <%= for (let i=0; i<employees.length; i++) { %>
-            <p>Employee ID: <%= employees[i].e_id %></p>
-            <p>Email: <%= employees[i].e_email %></p>
-            <p>password: <%= employees[i].e_password %></p>
-            <p>First Name: <%= employees[i].e_fname %></p>
-            <p>Last Name: <%= employees[i].e_lname %></p>
-            <p>This Years Sales: <%= employees[i].e_yearsales %></p>
-            <p>Years With The Company: <%= employees[i].e_years %></p>
-            <p>Total Lifetime Sales: <%= employees[i].e_totalsales %></p>
+    <div class="buttonBox">
+        <form action="/employee-home" method="get">
+            <button type="submit">View profile</button>
+        </form>
+        <a href="/logout" class="logButton">Logout</a>
+    </div>
 
-            <form action="/delete/<%=employees[i].e_id%>" method="post">
-                <button type="submit">Delete Employee</button>
-            </form>
+    <% if (employees && employees.length > 0) { %>
+        <% for (let i=0; i<employees.length; i++) { %>
+            <div class="empList">
+                <h1>Employee ID: <%= employees[i].e_id %></h1>
+                <h3>Email: <%= employees[i].e_email %></h3>
+                <h3>password: <%= employees[i].e_password %></h3>
+                <p>First Name: <%= employees[i].e_fname %></p>
+                <p>Last Name: <%= employees[i].e_lname %></p>
+                <p>This Years Sales: <%= employees[i].e_yearsales %></p>
+                <p>Years With The Company: <%= employees[i].e_years %></p>
+                <p>Total Lifetime Sales: <%= employees[i].e_totalsales %></p>
 
-            <a href="/edit/<%=employees[i].e_id%>">Edit Employee Record</a>
-        <%= } %>
-    <%= } else { %>
+                <form action="/delete/<%=employees[i].e_id%>" method="post">
+                    <button type="submit">Delete Employee</button>
+                </form>
+
+                <form action="/edit/<%=employees[i].e_id%>" method="get">
+                    <button type="submit">Edit Record</button>
+                </form>
+            </div>
+        <% } %>
+    <% } else { %>
         <p>No Employees To Display.</p>
-    <%= } %>
+    <% } %>
+
+    <form action="/add-employee" method="get">
+        <button type="submit">Add Employee</button>
+    </form>
 </body>
 </html>
