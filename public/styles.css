@@ -1,3 +1,63 @@
 body {
-    background-color: white;
+    background-color: #F5E7DE;
+}
+
+.empList {
+    background-color: #F2BFA4;
+    text-align: left;
+    display: inline-block;
+    padding: 2%;
+    margin: 5%;
+}
+
+
+
+.employee {
+    background-color: #F2BFA4;
+    padding: 2%;
+    margin: 2%;
+    text-align: center;
+}
+
+.buttonBox {
+    margin: 2% 2% 0 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.adminButton {
+    width: 100px;
+    height: 30px;
+}
+.logButton {
+    background-color: #F2BFA4;
+    padding: 1%;
+    width: 100px;
+    height: 20px;
+    text-align: center;  
+    display: block; 
+}
+
+.empButton {
+    background-color: #F2BFA4;
+    padding: 1%;
+    margin: 0 45% 0 45%;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.addDiv {
+    background-color: #F2BFA4;
+    padding: 1%;
+    margin: 2%;
+}
+
+input {
+    margin: 1%;
+}
+
+.editDiv {
+    background-color: #F2BFA4;
+    padding: 1%;
+    margin: 2%;
 }
